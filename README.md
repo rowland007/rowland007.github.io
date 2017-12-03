@@ -1,5 +1,13 @@
 ## Welcome to GitHub Pages
 
+### Signing Commits
+
+```
+git config --global commit.gpgsign true
+git commit -S -m your_commit_message
+# Creates a signed commit
+```
+
 ### Signed & Verifying Releases
 
 A digital signature certifies and timestamps a file. If the file is subsequently modified in any way, a verification of the signature will fail. A digital signature can serve the same purpose as a hand-written signature with the additional benefit of being tamper-resistant. The GnuPG source distribution, for example, is signed so that users can verify that the source code has not been modified since it was packaged.
@@ -91,5 +99,3 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
-
-
