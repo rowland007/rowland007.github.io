@@ -4,6 +4,8 @@
 
 ```
 git config --global commit.gpgsign true
+git commit -S -m your_commit_message
+# Creates a signed commit
 ```
 
 ### Signed & Verifying Releases
@@ -97,5 +99,3 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
-
-
