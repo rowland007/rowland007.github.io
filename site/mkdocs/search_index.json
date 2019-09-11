@@ -1,0 +1,69 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-mkdocs",
+            "text": "For full documentation visit  mkdocs.org .",
+            "title": "Welcome to MkDocs"
+        },
+        {
+            "location": "/#commands",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "Commands"
+        },
+        {
+            "location": "/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/security/signing-software/",
+            "text": "Signing Commits\n\n\ngit config --global commit.gpgsign true\ngit commit -S -m your_commit_message\n# Creates a signed commit\n\n\n\n\nSigned & Verifying Releases\n\n\nA digital signature certifies and timestamps a file. If the file is subsequently modified in any way, a verification of the signature will fail. A digital signature can serve the same purpose as a hand-written signature with the additional benefit of being tamper-resistant. The GnuPG source distribution, for example, is signed so that users can verify that the source code has not been modified since it was packaged.\n\n\nTo download my signing key, use either one of the methods below. Both commands will download the same key.\n\n\ngpg --keyserver hkp://pgp.mit.edu --recv-keys 8ACD28A5\ncurl https://keybase.io/randarxj7/key.asc | gpg --import\n\n\n\n\nOnce you have my key, you can verify files by using the command.\n\ngpg --verify key.asc file.zip\n or \ngpg --verify file.zip.sig file.zip\n\nYou should see a message like the following:\n\n\ngpg: Signature made Sat 29 Jul 2017 12:14:18 AM CDT using RSA key ID BE6ED428\ngpg: Good signature from \"Randy Rowland <rowland007@gmail.com>\"\n\n\n\n\nYou want to see \nGood signature\n.\n\n\nSigning Releases\n\n\ngpg --output file.sig --detach-sign file\n\nor\n\ngpg -ab file\n this will create \nfile.asc\n\nIf you need to put the signature inside of a text file you can use\n\ngpg --clearsign file.txt\n\n\n-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA1\n\ngpg --keyserver hkp://pgp.mit.edu --recv-keys 8ACD28A5\ncurl https://keybase.io/randarxj7/key.asc | gpg --import\n-----BEGIN PGP SIGNATURE-----\nVersion: GnuPG v1\n\niQIcBAEBAgAGBQJZfBthAAoJEL/0LvG+btQosIYP/RV1dCEKEbT56HnSx+/vK24J\n0VqaUtSZqbb9PWARPL4ji26m0QfxTgbVxXWo8OT0m4vAOS9cRKov7hgZQhbOqC4a\nWU/Hso02hsZv/0kMgyor48G4tVehPcPJU4oo3bpAfVJqz/CUOCn0QtU0FPJwFV5M\n0wVeeGuHhMXlNhyC++uxiBwwqVFMdL4iO1PijvBGoduxyt/uoBN8q2Z7cQyVI2n6\n0PFPShvcU28MZbEaKYv4cRCTBb3OGkA9tteiRtwArN9+QdCYHxwoRos6fFxbt1xi\nx6YxprbalwS05Lgrxo7k5OarmUr23WBLMT5KXFUGUJXU9pV9CNvp41W6VpjwT71i\nRrjO9BVudjQz6mhn64u6uiBWNmX9VhME7M615eMk1oUpGVKBiYfMLTTiaGyl8QYE\n6rdZPWquNXflE2gmBzeYBgjhjOpkNVFdoVSToAZgOLvE2jRNFwa4KuybnPFq5Od+\nYGgUELIVockUafttkB4CiBXH2LdahnoHmq8SlgEL8aYb0aI3khqpv0mW5iN/sgja\n0oIoNOzK8O4Gf2wM8kugmEvN67mZTyioDrP4Oy3C9DIL7hqjSegrlp95wlZ0CK2y\nX/pPjtg5kPfcHbPD47BNiHLo5sh9ItwEhKFq6V/p8+zhO4hCiqRM239wi4FDGvx0\nQog57bj6lHGqzmOHSvX5\n=H2Vm\n-----END PGP SIGNATURE-----\n\n\n\n\nTo verify this, you just need to run \ngpg --verify keys.asc\n This method does not require two files.",
+            "title": "Signing software"
+        },
+        {
+            "location": "/security/signing-software/#signing-commits",
+            "text": "git config --global commit.gpgsign true\ngit commit -S -m your_commit_message\n# Creates a signed commit",
+            "title": "Signing Commits"
+        },
+        {
+            "location": "/security/signing-software/#signed-verifying-releases",
+            "text": "A digital signature certifies and timestamps a file. If the file is subsequently modified in any way, a verification of the signature will fail. A digital signature can serve the same purpose as a hand-written signature with the additional benefit of being tamper-resistant. The GnuPG source distribution, for example, is signed so that users can verify that the source code has not been modified since it was packaged.  To download my signing key, use either one of the methods below. Both commands will download the same key.  gpg --keyserver hkp://pgp.mit.edu --recv-keys 8ACD28A5\ncurl https://keybase.io/randarxj7/key.asc | gpg --import  Once you have my key, you can verify files by using the command. gpg --verify key.asc file.zip  or  gpg --verify file.zip.sig file.zip \nYou should see a message like the following:  gpg: Signature made Sat 29 Jul 2017 12:14:18 AM CDT using RSA key ID BE6ED428\ngpg: Good signature from \"Randy Rowland <rowland007@gmail.com>\"  You want to see  Good signature .",
+            "title": "Signed &amp; Verifying Releases"
+        },
+        {
+            "location": "/security/signing-software/#signing-releases",
+            "text": "gpg --output file.sig --detach-sign file \nor gpg -ab file  this will create  file.asc \nIf you need to put the signature inside of a text file you can use gpg --clearsign file.txt  -----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA1\n\ngpg --keyserver hkp://pgp.mit.edu --recv-keys 8ACD28A5\ncurl https://keybase.io/randarxj7/key.asc | gpg --import\n-----BEGIN PGP SIGNATURE-----\nVersion: GnuPG v1\n\niQIcBAEBAgAGBQJZfBthAAoJEL/0LvG+btQosIYP/RV1dCEKEbT56HnSx+/vK24J\n0VqaUtSZqbb9PWARPL4ji26m0QfxTgbVxXWo8OT0m4vAOS9cRKov7hgZQhbOqC4a\nWU/Hso02hsZv/0kMgyor48G4tVehPcPJU4oo3bpAfVJqz/CUOCn0QtU0FPJwFV5M\n0wVeeGuHhMXlNhyC++uxiBwwqVFMdL4iO1PijvBGoduxyt/uoBN8q2Z7cQyVI2n6\n0PFPShvcU28MZbEaKYv4cRCTBb3OGkA9tteiRtwArN9+QdCYHxwoRos6fFxbt1xi\nx6YxprbalwS05Lgrxo7k5OarmUr23WBLMT5KXFUGUJXU9pV9CNvp41W6VpjwT71i\nRrjO9BVudjQz6mhn64u6uiBWNmX9VhME7M615eMk1oUpGVKBiYfMLTTiaGyl8QYE\n6rdZPWquNXflE2gmBzeYBgjhjOpkNVFdoVSToAZgOLvE2jRNFwa4KuybnPFq5Od+\nYGgUELIVockUafttkB4CiBXH2LdahnoHmq8SlgEL8aYb0aI3khqpv0mW5iN/sgja\n0oIoNOzK8O4Gf2wM8kugmEvN67mZTyioDrP4Oy3C9DIL7hqjSegrlp95wlZ0CK2y\nX/pPjtg5kPfcHbPD47BNiHLo5sh9ItwEhKFq6V/p8+zhO4hCiqRM239wi4FDGvx0\nQog57bj6lHGqzmOHSvX5\n=H2Vm\n-----END PGP SIGNATURE-----  To verify this, you just need to run  gpg --verify keys.asc  This method does not require two files.",
+            "title": "Signing Releases"
+        },
+        {
+            "location": "/security/syncthing/",
+            "text": "Overview\n\n\nWhen utilizing Syncthing between desktop computers, phones, and the Syncthing server, files located on the server may be plaintext. This could cause compromise if someone was to gain access to the files on the server if the server is on. The hard drive is encrypted but only when power is removed. To increase security, all files should be synced using Cryptomator. This will ensure files at rest on the server are always encrypted. This will also ensure files are encrypted as they transverse through the internet and prevent unauthorized access should the modem/router/wi-fi be compromised. This document covers how to setup the correct file structure per VM or OS.\n\n\n\n\nFile Management\n\n\nThe idea is to have the folders of the encrypted files synced in another location besides the \nDocument\n like folders. Then when utilizing Cryptomator to decrypt the files and mount it to a location, \nDocument\n could be mounted over with the decrypted files. This could also server a decoy with fake files located in \nDocument\n if the device happens to be investigated. [\nUPDATE\n] Cryptomator will not allow the decrypted files to be mounted over other files. The directory must be empty.\n\n\n\n\nExample\n\n\nWithin the \n/home/$USER/\n directory, you utilize one directory to hold all the encrypted sync files. For example \n/home/$USER/Sync/\n and within that folder would have all the Cryptomator vaults. The following example is for a school-used device. In \n/home/$USER/Sync/\n create a new vault called \ndocuments\n and \nphotos\n. This will create new directories so the file structure will now look like \n/home/$USER/Sync/documents/masterkey.cryptomator\n and \n/home/$USER/Sync/photos/masterkey.cryptomator\n. When going to decrypt them, click the more options button. Use the \nCustom Mount Point\n and select the proper folder within the \n/home/$USER/\n folder.\n\n\nNotes\n\n\nSyncthing should only be used for working documents. Once the file is ready for archive purposes, it should be moved to the Nextcloud server. The Nextcloud server provides encryption at rest and the ability to access the file through the application or web if needed for reference.\n\n\nA list of Syncthing devices and folder IDs should be placed on a secure and encrypted server. This will allow new devices to add previous devices and folder IDs so syncing can happen.",
+            "title": "Syncthing"
+        },
+        {
+            "location": "/security/syncthing/#overview",
+            "text": "When utilizing Syncthing between desktop computers, phones, and the Syncthing server, files located on the server may be plaintext. This could cause compromise if someone was to gain access to the files on the server if the server is on. The hard drive is encrypted but only when power is removed. To increase security, all files should be synced using Cryptomator. This will ensure files at rest on the server are always encrypted. This will also ensure files are encrypted as they transverse through the internet and prevent unauthorized access should the modem/router/wi-fi be compromised. This document covers how to setup the correct file structure per VM or OS.",
+            "title": "Overview"
+        },
+        {
+            "location": "/security/syncthing/#file-management",
+            "text": "The idea is to have the folders of the encrypted files synced in another location besides the  Document  like folders. Then when utilizing Cryptomator to decrypt the files and mount it to a location,  Document  could be mounted over with the decrypted files. This could also server a decoy with fake files located in  Document  if the device happens to be investigated. [ UPDATE ] Cryptomator will not allow the decrypted files to be mounted over other files. The directory must be empty.",
+            "title": "File Management"
+        },
+        {
+            "location": "/security/syncthing/#example",
+            "text": "Within the  /home/$USER/  directory, you utilize one directory to hold all the encrypted sync files. For example  /home/$USER/Sync/  and within that folder would have all the Cryptomator vaults. The following example is for a school-used device. In  /home/$USER/Sync/  create a new vault called  documents  and  photos . This will create new directories so the file structure will now look like  /home/$USER/Sync/documents/masterkey.cryptomator  and  /home/$USER/Sync/photos/masterkey.cryptomator . When going to decrypt them, click the more options button. Use the  Custom Mount Point  and select the proper folder within the  /home/$USER/  folder.",
+            "title": "Example"
+        },
+        {
+            "location": "/security/syncthing/#notes",
+            "text": "Syncthing should only be used for working documents. Once the file is ready for archive purposes, it should be moved to the Nextcloud server. The Nextcloud server provides encryption at rest and the ability to access the file through the application or web if needed for reference.  A list of Syncthing devices and folder IDs should be placed on a secure and encrypted server. This will allow new devices to add previous devices and folder IDs so syncing can happen.",
+            "title": "Notes"
+        }
+    ]
+}

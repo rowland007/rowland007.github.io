@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Randy Rowland">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Signing software - Randar Labs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Signing software";
+    var mkdocs_page_input_path = "security/signing-software.md";
+    var mkdocs_page_url = "/security/signing-software/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Randar Labs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Security</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Signing software</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#signing-commits">Signing Commits</a></li>
+    
+
+    <li class="toctree-l3"><a href="#signed-verifying-releases">Signed &amp; Verifying Releases</a></li>
+    
+
+    <li class="toctree-l3"><a href="#signing-releases">Signing Releases</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../syncthing/">Syncthing</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Randar Labs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Security &raquo;</li>
+        
+      
+    
+    <li>Signing software</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/rowland007/rowland007.github.io/edit/master/docs/security/signing-software.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="signing-commits">Signing Commits</h1>
+<pre><code>git config --global commit.gpgsign true
+git commit -S -m your_commit_message
+# Creates a signed commit
+</code></pre>
+
+<h1 id="signed-verifying-releases">Signed &amp; Verifying Releases</h1>
+<p>A digital signature certifies and timestamps a file. If the file is subsequently modified in any way, a verification of the signature will fail. A digital signature can serve the same purpose as a hand-written signature with the additional benefit of being tamper-resistant. The GnuPG source distribution, for example, is signed so that users can verify that the source code has not been modified since it was packaged.</p>
+<p>To download my signing key, use either one of the methods below. Both commands will download the same key.</p>
+<pre><code>gpg --keyserver hkp://pgp.mit.edu --recv-keys 8ACD28A5
+curl https://keybase.io/randarxj7/key.asc | gpg --import
+</code></pre>
+
+<p>Once you have my key, you can verify files by using the command.
+<code>gpg --verify key.asc file.zip</code> or <code>gpg --verify file.zip.sig file.zip</code>
+You should see a message like the following:</p>
+<pre><code>gpg: Signature made Sat 29 Jul 2017 12:14:18 AM CDT using RSA key ID BE6ED428
+gpg: Good signature from &quot;Randy Rowland &lt;rowland007@gmail.com&gt;&quot;
+</code></pre>
+
+<p>You want to see <strong>Good signature</strong>.</p>
+<h1 id="signing-releases">Signing Releases</h1>
+<p><code>gpg --output file.sig --detach-sign file</code>
+or
+<code>gpg -ab file</code> this will create <code>file.asc</code>
+If you need to put the signature inside of a text file you can use
+<code>gpg --clearsign file.txt</code></p>
+<pre><code>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+gpg --keyserver hkp://pgp.mit.edu --recv-keys 8ACD28A5
+curl https://keybase.io/randarxj7/key.asc | gpg --import
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBAgAGBQJZfBthAAoJEL/0LvG+btQosIYP/RV1dCEKEbT56HnSx+/vK24J
+0VqaUtSZqbb9PWARPL4ji26m0QfxTgbVxXWo8OT0m4vAOS9cRKov7hgZQhbOqC4a
+WU/Hso02hsZv/0kMgyor48G4tVehPcPJU4oo3bpAfVJqz/CUOCn0QtU0FPJwFV5M
+0wVeeGuHhMXlNhyC++uxiBwwqVFMdL4iO1PijvBGoduxyt/uoBN8q2Z7cQyVI2n6
+0PFPShvcU28MZbEaKYv4cRCTBb3OGkA9tteiRtwArN9+QdCYHxwoRos6fFxbt1xi
+x6YxprbalwS05Lgrxo7k5OarmUr23WBLMT5KXFUGUJXU9pV9CNvp41W6VpjwT71i
+RrjO9BVudjQz6mhn64u6uiBWNmX9VhME7M615eMk1oUpGVKBiYfMLTTiaGyl8QYE
+6rdZPWquNXflE2gmBzeYBgjhjOpkNVFdoVSToAZgOLvE2jRNFwa4KuybnPFq5Od+
+YGgUELIVockUafttkB4CiBXH2LdahnoHmq8SlgEL8aYb0aI3khqpv0mW5iN/sgja
+0oIoNOzK8O4Gf2wM8kugmEvN67mZTyioDrP4Oy3C9DIL7hqjSegrlp95wlZ0CK2y
+X/pPjtg5kPfcHbPD47BNiHLo5sh9ItwEhKFq6V/p8+zhO4hCiqRM239wi4FDGvx0
+Qog57bj6lHGqzmOHSvX5
+=H2Vm
+-----END PGP SIGNATURE-----
+</code></pre>
+
+<p>To verify this, you just need to run <code>gpg --verify keys.asc</code> This method does not require two files.</p>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../syncthing/" class="btn btn-neutral float-right" title="Syncthing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/rowland007/rowland007.github.io" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../syncthing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>
