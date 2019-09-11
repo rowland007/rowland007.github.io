@@ -1,1 +1,14 @@
-site_name: My Docs
+site_name: Randar Labs
+site_url: https://rowland007.github.io/
+site_description: Personal website to write about projects and what I've learned over the years.
+site_author: Randy Rowland
+repo_url: https://github.com/rowland007/rowland007.github.io
+theme: readthedocs
+strict: false
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+
+nav:
+  - Home: index.md
+  - Security:
+    - Syncthing: security/syncthing.md
+    - Signing Software: security/signing-software.md
