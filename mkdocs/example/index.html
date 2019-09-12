@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>GPG - Randy Rowland</title>
+    <title>Example mkdocs File - Randy Rowland</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -32,7 +32,7 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "GPG Import", url: "#_top", children: [
+          {title: "mkdocs.yml Example", url: "#_top", children: [
           ]},
         ];
 
@@ -59,20 +59,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../syncthing/" class="btn btn-xs btn-default pull-right">
+      <a href="../github/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../syncthing/" class="btn btn-xs btn-link">
-        Syncthing
+      <a href="../github/" class="btn btn-xs btn-link">
+        Working with Github
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../../mkdocs/github/" class="btn btn-xs btn-default pull-left">
+      <a href="../install/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../../mkdocs/github/" class="btn btn-xs btn-link">
-        Working with Github
+        Previous</a><a href="../install/" class="btn btn-xs btn-link">
+        Installation
       </a>
     </div>
     
@@ -80,13 +80,31 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="gpg-import">GPG Import<a class="headerlink" href="#gpg-import" title="Permanent link">&para;</a></h1>
-<p>To import the gpg software signing key, open seahorse and search for <code>0xF32E17D74D6DE172</code>.</p>
-<p>Once key is locate and downloaded run:</p>
-<pre><code class="bash">gpg -K
-</code></pre>
+    <h1 id="mkdocsyml-example">mkdocs.yml Example<a class="headerlink" href="#mkdocsyml-example" title="Permanent link">&para;</a></h1>
+<pre><code>site_name: MkDocs Test Document
+site_url: https://rowland007.github.io/
+site_description: Testing out MkDocs tools. 
+site_author: Randy Rowland
+repo_url: https://github.com/rowland007/rowland007.github.io/
+strict: true
+theme: windmill
 
-<p>Look to ensure the key is added.</p>
+markdown_extensions:
+  - smarty
+  - attr_list
+  - admonition
+  - toc:
+      permalink: True
+plugins:
+  - search:
+      lang: en
+
+nav:
+  - About: index.md
+  - Security:
+    - GPG: security/gpg.md
+    - Syncthing: security/syncthing.md
+</code></pre>
 
   <br>
     
@@ -99,20 +117,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../syncthing/" class="btn btn-xs btn-default pull-right">
+      <a href="../github/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../syncthing/" class="btn btn-xs btn-link">
-        Syncthing
+      <a href="../github/" class="btn btn-xs btn-link">
+        Working with Github
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../../mkdocs/github/" class="btn btn-xs btn-default pull-left">
+      <a href="../install/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../../mkdocs/github/" class="btn btn-xs btn-link">
-        Working with Github
+        Previous</a><a href="../install/" class="btn btn-xs btn-link">
+        Installation
       </a>
     </div>
     
@@ -123,7 +141,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 <footer class="col-md-12 wm-page-content">
       <p>
-        <a href="https://github.com/rowland007/rowland007.github.io/edit/master/docs/security/gpg.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/rowland007/rowland007.github.io/edit/master/docs/mkdocs/example.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

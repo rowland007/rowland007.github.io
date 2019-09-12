@@ -36,10 +36,6 @@
         var pageToc = [
           {title: "Overview", url: "#_top", children: [
           ]},
-          {title: "Manual Installation", url: "#manual-installation", children: [
-          ]},
-          {title: "mkdocs.yml Example", url: "#mkdocsyml-example", children: [
-          ]},
         ];
 
     </script>
@@ -107,6 +103,19 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <ul class="wm-toctree">
         <li class="wm-toc-li wm-toc-lev1 "><a href="" class="wm-article-link wm-toc-text">About</a>
 </li>
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">MkDocs</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mkdocs/install/" class="wm-article-link wm-toc-text">Installation</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mkdocs/example/" class="wm-article-link wm-toc-text">Example mkdocs File</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mkdocs/github/" class="wm-article-link wm-toc-text">Working with Github</a>
+</li>
+  </ul>
+</li>
+
         <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Security</span>
 </li>
 <li class="wm-toc-li-nested collapse">
@@ -140,12 +149,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="security/gpg/" class="btn btn-xs btn-default pull-right">
+      <a href="mkdocs/install/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="security/gpg/" class="btn btn-xs btn-link">
-        GPG
+      <a href="mkdocs/install/" class="btn btn-xs btn-link">
+        Installation
       </a>
     </div>
     
@@ -154,38 +163,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<p>MkDocs is a fast, simple and downright gorgeous static site generator that&rsquo;s geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.</p>
-<h1 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">&para;</a></h1>
-<p>In order to manually install MkDocs you&rsquo;ll need Python installed on your system, as well as the Python package manager, pip. </p>
-<pre><code>sudo [apt | dnf] install python-pip
-pip install mkdocs
-</code></pre>
-
-<h1 id="mkdocsyml-example">mkdocs.yml Example<a class="headerlink" href="#mkdocsyml-example" title="Permanent link">&para;</a></h1>
-<pre><code>site_name: MkDocs Test Document
-site_url: https://rowland007.github.io/
-site_description: Testing out MkDocs tools. 
-site_author: Randy Rowland
-repo_url: https://github.com/rowland007/rowland007.github.io/
-strict: true
-theme: windmill
-
-markdown_extensions:
-  - smarty
-  - attr_list
-  - admonition
-  - toc:
-      permalink: True
-plugins:
-  - search:
-      lang: en
-
-nav:
-  - About: index.md
-  - Security:
-    - GPG: security/gpg.md
-    - Syncthing: security/syncthing.md
-</code></pre>
+<p>This site is used to keep notes on things I have learned for writing code, documentation, and signing code. It also is used to test out some of the features for documentation purpose. I am not really looking for pull requests but if you notice something that is false or could be a security issue, please open an issue and create a pull requests. Just ensure you&rsquo;re able to explain the issue fully and have references that can back it up.</p>
+<p>Hopefully, you can learn something from this page as well.</p>
 
   <br>
     
@@ -198,12 +177,12 @@ nav:
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="security/gpg/" class="btn btn-xs btn-default pull-right">
+      <a href="mkdocs/install/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="security/gpg/" class="btn btn-xs btn-link">
-        GPG
+      <a href="mkdocs/install/" class="btn btn-xs btn-link">
+        Installation
       </a>
     </div>
     
@@ -224,5 +203,5 @@ Edit on GitHub</a>
 </html>
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-09-12 05:51:20
+Build Date UTC : 2019-09-12 06:42:53
 -->
