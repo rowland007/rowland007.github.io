@@ -1,3 +1,186 @@
-baseURL = "http://example.org/"
+baseURL = "https://rowland007.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+theme = "aafu"
+
+[params]
+    title = "Randy Rowland"
+    author = "Randy Rowland"
+    description = "Website title"
+    copyright = "&copy;2019"
+
+    [params.theme]
+        allowToggle = true
+        # Available themes are 'light', 'dark', and 'pinkish'
+        mainTheme = "dark"
+        altTheme = "light"
+        # setting false below will hide 'aafu by darshan' displayed under the profile pic
+        showAttribute = false
+
+    [params.favicons]
+        use = true
+        metas = '''
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">
+        <link rel="shortcut icon" href="favicon.ico">
+        '''
+
+    # Profile section
+    [params.profile]
+        name = "Randy Rowland"
+		tagline = "IT Professional"
+		location = "United States"
+        photo = "profile.jpg"
+
+    # Section for links to social websites
+    [params.social]
+        title = "Links"
+
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-linkedin-in"
+            url = "https://www.linkedin.com/in/randall-rowland-332a5039"
+            title = "LinkedIn"		
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-dev"
+            url = "https://dev.to/rowland007"
+            title = "DEV.to"
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-github"
+            url = "https://github.com/rowland007"
+            title = "GitHub"
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-twitter"
+            url = "https://twitter.com/RandarXJ7"
+            title = "Twitter"
+		[[params.social.list]]
+            class = "fab"
+            icon = "fa-keybase"
+            url = "https://keybase.io/randarxj7/"
+            title = "Keybase"
+		[[params.social.list]]
+            class = "fab"
+            icon = "fa-reddit-alien"
+            url = "https://www.reddit.com/user/rowland007"
+            title = "Reddit"
+
+    #Specify what is showin in the Accordion
+    [[params.showInAccordion]]
+        item = "aboutme"
+        expand = true   # true for the section that is initially expanded
+    [[params.showInAccordion]]
+        item = "experience"
+    [[params.showInAccordion]]
+        item = "education"
+    [[params.showInAccordion]]
+        item = "publication"
+    [[params.showInAccordion]]
+        item = "project"
+
+
+    [params.aboutme]
+        title = "About Me"
+        icon = "fas fa-user"
+        description = "**Visit [randyrowland.me](https://randyrowland.me) to find out more.**<br> I currently work full time while continuing my formal education. When time permits I enjoy reading books and websites on how to improve my skillsets. I also write short blog posts about what I learn on my own website. I also do small amouts of coding until I am done with school."
+
+    # Experience section
+    [params.experience]
+        title = "Experiences"
+        icon = "fas fa-briefcase"
+
+        [[params.experience.list]]
+            position = "Airborne Mission System Specialist"
+            dates = "2005 - *Present*"
+            company = "United States Air Force"
+            link = "https://www.airforce.com/careers/detail/airborne-mission-systems-specialist"
+            #details = "Printed from desktop. Sent [emails](#). Called people using telephone. Drank water from office cooler. Ate donuts on people's birthdays."
+        [[params.experience.list]]
+            position = "Crew Member"
+            dates = "2001 - 2005"
+            company = "McDonald's Corporation"
+
+    # Education section
+    [params.education]
+        title = "Education"
+        icon = "fas fa-graduation-cap"
+
+        [[params.education.list]]
+            degree = "B.S. in Cybersecurity"
+            college = "Southern New Hampshire University"
+            dates = "2023"
+#            thesis_title = "Effect of humans on other humans: a study of human behavior."
+#            thesis_link = "#"
+        [[params.education.list]]
+            degree = "B.S. in Computer Science"
+            college = "American Sentinel University"
+            dates = "2017"
+#            thesis_title = "Effect of humans on other humans: a study of human behavior."
+#            thesis_link = "#"
+        [[params.education.list]]
+            degree = "A.A.S in Information Systems"
+            college = "Community College of the Air Force"
+            dates = "2014"
+
+    # Publication section
+#    [params.publication]
+#        title = "Publications"
+#        icon = "fas fa-book"
+#        #The order below determines the order in which the items appear in "Publications" section
+#        format = ["date", "authors", "title", "journal"]
+#        #If you don't want to group publications, comment the line below by adding # at the beginning
+#        types = ["Journal Articles", "Proceedings"]
+
+#       [[params.publication.list]]
+#            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+#            authors = "F Last, F Second, P secondary"
+#            date = "2018"
+#            journal = "Journal of Field 52 (16), 9033-9044"
+#            link = "#"
+#            type = "Journal Articles"
+
+    # Project section
+    [params.project]
+        title = "Projects"
+        icon = "fas fa-project-diagram"
+
+        [[params.project.list]]
+            title = "Pyxis"
+            url = "https://rowland007.github.io/Pyxis/"
+            description = "A native Pandora Radio client for Android without requiring Google Play Services"
+        [[params.project.list]]
+            title = "Drink of the Day"
+            url = "https://randyrowland.me/project/drink/"
+            description = "An Android application that provides themed recipes for adult beverages based on the day of the week"           
+
+    # Skill section
+    [params.skill]
+        title = "Skills"
+        panelId = "skill-panel"
+        icon = "fas fa-cogs"
+
+        [[params.skill.list]]
+            skill = "Skill 1, Skill 2"
+            skillrating = 90
+        [[params.skill.list]]
+            skill = "Skill 3"
+            skillrating = 80
+        [[params.skill.list]]
+            skill = "Skill 4"
+            skillrating = 50
+
+    # Hobby section
+    [params.hobby]
+        title = "Hobbies"
+        icon = "fas fa-gamepad"
+		
+        [[params.hobby.list]]		
+		    hobby = "Cooking"
+        [[params.hobby.list]]		
+		    hobby = "Hiking"
+        [[params.hobby.list]]		
+		    hobby = "Baking"
