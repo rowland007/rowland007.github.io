@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <title>Randy Rowland</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Website title" />
+<meta name="author" content="Randy Rowland" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.59.1" />        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">        <link rel="manifest" href="site.webmanifest">        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="favicon.ico">        
+
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+
+  <link
+    id="color-CSS"
+    rel="stylesheet"
+    href="/css/aafu_dark.css"
+    type="text/css"
+  />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = function() {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active")
+        .nextElementSibling;
+      defaultActivePanel.style.maxHeight =
+        defaultActivePanel.scrollHeight + "px";
+    };
+    window.onresize = function() {
+      document.querySelector(".active").nextElementSibling.style.maxHeight =
+        document.querySelector(".active").nextElementSibling.scrollHeight +
+        "px";
+    };
+  </script>
+</head>
+<body class="container" style="max-width: 1400px;">
+<div class="ml-auto mr-auto row row-eq-height rounded">
+  <div class="col-md-5 text-center p-2 mt-3">
+    <div class="profile-area rounded text-center position-relative">
+      
+<div class="toggleSwitchContainer" style="width: 45px; height: 45px;">
+  <i
+    class="fas fa-toggle-on zoomlink"
+    id="toggle"
+    title="Toggle Theme"
+    onclick="toggleTheme(this)"
+  ></i>
+</div>
+
+<script>
+  const mainTheme =
+    "\/css\/aafu_dark.css";
+  const altTheme =
+    "\/css\/aafu_light.css";
+  const currentCSS = document.querySelector("#color-CSS");
+  function toggleTheme(elem) {
+    
+    
+    elem.classList.toggle("fa-toggle-off");
+    elem.classList.toggle("fa-toggle-on");
+    if (currentCSS.href.includes(mainTheme)) {
+      currentCSS.setAttribute("href", "." + altTheme);
+    } else {
+      currentCSS.setAttribute("href", "." + mainTheme);
+    }
+  }
+
+  function changeThemeColor() {
+    themeColor.content = getComputedStyle(document.body)["background-color"];
+  }
+  const thisBody = document.body;
+  thisBody.addEventListener("webkitTransitionEnd", changeThemeColor);
+  thisBody.addEventListener("transitionend", changeThemeColor);
+</script>
+
+
+      <div class="d-flex justify-content-center pt-2">
+  <div class="w-100 h-100">
+    <img
+      class="rounded rounded-circle mt-4"
+      src="/images/profile.jpg"
+      alt="Randy Rowland"
+      style="width: 95%; max-width: 300px;"
+    />
+  </div>
+</div>
+
+      <div class="p-2">
+        <h1 class="mb-0">Randy Rowland</h1>
+<h2 class="mb-0">IT Professional</h2>
+<h3 class="mb-0">United States</h3>
+<div class="mt-2 d-flex flex-wrap justify-content-center">
+  
+  <div style="height:45px; width:45px;">
+    <a href="https://www.linkedin.com/in/randall-rowland-332a5039">
+      <i class="zoomlink mt-1 fab fa-linkedin-in"></i>
+    </a>
+  </div>
+  
+  <div style="height:45px; width:45px;">
+    <a href="https://dev.to/rowland007">
+      <i class="zoomlink mt-1 fab fa-dev"></i>
+    </a>
+  </div>
+  
+  <div style="height:45px; width:45px;">
+    <a href="https://github.com/rowland007">
+      <i class="zoomlink mt-1 fab fa-github"></i>
+    </a>
+  </div>
+  
+  <div style="height:45px; width:45px;">
+    <a href="https://twitter.com/RandarXJ7">
+      <i class="zoomlink mt-1 fab fa-twitter"></i>
+    </a>
+  </div>
+  
+  <div style="height:45px; width:45px;">
+    <a href="https://keybase.io/randarxj7/">
+      <i class="zoomlink mt-1 fab fa-keybase"></i>
+    </a>
+  </div>
+  
+  <div style="height:45px; width:45px;">
+    <a href="https://www.reddit.com/user/rowland007">
+      <i class="zoomlink mt-1 fab fa-reddit-alien"></i>
+    </a>
+  </div>
+  
+</div>
+
+        <footer class="mb-4">
+  <span class="markdownify">&copy;2019</span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-7 pt-2 mt-3">
+    
+    <h2 class="accordion  active ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-user"></i>
+        About Me</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      <p class="markdownify">
+  <strong>Visit <a href="https://randyrowland.me">randyrowland.me</a> to find out more.</strong><br> I currently work full time while continuing my formal education. When time permits I enjoy reading books and websites on how to improve my skillsets. I also write short blog posts about what I learn on my own website. I also do small amouts of coding until I am done with school.
+</p>
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-briefcase"></i>
+        Experiences</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      
+<dl>
+  <dt class="mb-0">
+    Airborne Mission System Specialist
+  </dt>
+  <dd class="mb-0 ml-3">
+    <span class="markdownify">2005 - <em>Present</em></span>
+    &middot;
+    
+    <a href="https://www.airforce.com/careers/detail/airborne-mission-systems-specialist">United States Air Force</a>
+    
+  </dd>
+  <dd class="mb-0 ml-4 markdownify"></dd>
+</dl>
+
+<dl>
+  <dt class="mb-0">
+    Crew Member
+  </dt>
+  <dd class="mb-0 ml-3">
+    <span class="markdownify">2001 - 2005</span>
+    &middot;
+    
+    McDonald&#39;s Corporation
+    
+  </dd>
+  <dd class="mb-0 ml-4 markdownify"></dd>
+</dl>
+
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-graduation-cap"></i>
+        Education</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      
+<dl>
+  <dt>B.S. in Cybersecurity</dt>
+  <dd class="mb-0 ml-3">2023 &middot; Southern New Hampshire University</dd>
+  
+</dl>
+
+<dl>
+  <dt>B.S. in Computer Science</dt>
+  <dd class="mb-0 ml-3">2017 &middot; American Sentinel University</dd>
+  
+</dl>
+
+<dl>
+  <dt>A.A.S in Information Systems</dt>
+  <dd class="mb-0 ml-3">2014 &middot; Community College of the Air Force</dd>
+  
+</dl>
+
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class=""></i>
+        </span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      
+
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-project-diagram"></i>
+        Projects</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      <dl>
+  
+  <dt>
+    <a href="https://rowland007.github.io/Pyxis/" style="font-variant: small-caps; ">Pyxis</a>
+  </dt>
+  <dd class="mb-0 ml-3 markdownify">A native Pandora Radio client for Android without requiring Google Play Services</dd>
+  
+  <dt>
+    <a href="https://randyrowland.me/project/drink/" style="font-variant: small-caps; ">Drink of the Day</a>
+  </dt>
+  <dd class="mb-0 ml-3 markdownify">An Android application that provides themed recipes for adult beverages based on the day of the week</dd>
+  
+</dl>
+
+    </div>
+    
+    <script src="/js/accordion.js"></script>
+  </div>
+</div>
+
+  </body>
+</html>
